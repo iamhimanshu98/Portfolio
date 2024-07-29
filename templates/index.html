@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- metadata for device compatibility -->
+    <title>Himanshu Kumawat | Portfolio</title> <!-- Browser Tab name -->
+    <link rel="shortcut icon" type="image/ico" href="static/files/favicon.ico"> <!-- Connecting Favicon for Browser tab -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+
+<body>
+    <header >
+        <div id="navbar">
+            <div class="left"><a href="/">Portfolio</a></div>
+            <div class="right">
+                <ul>
+                    <li><a href="#sec1">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Interests</a></li>
+                    <li><a href="#sec2">Contact me</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="sec1" >
+        <section class="first">
+            <div class="left-section">
+                Hi, My name is <span id="colored">Himanshu</span>
+                <div>and I'm a</div>
+                <span id="element"></span>
+                <br>
+                <!-- <img class="downloadicon" src="static/files/download.png" alt=""> -->
+                <div id="cv"><a href="/static/files/resume.pdf" id="download" download="him_resume">Download Resume</a>
+                    <button class="git" onclick="window.location.href='https:/github.com/iamhimanshu98'">GitHub</button>
+                </div>
+
+            </div>
+
+            <div class="right-section">
+                <img id="profilepic" src="static/files/profile.JPG" alt="profile_pic" width="200">
+            </div>
+
+        </section>
+
+        <section id="sec2" class="second">
+            <img id="bg" src="static/files/bg3.png" alt="bg_image" width="500">
+            <div class="details">
+                <div id="socialmedia">
+                    <img class="icon" src="static/files/linkedin.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/www.linkedin.com/in/iamhimanshu98/'">Linkedin</button>
+                    <img class="icon" src="static/files/instagram.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/www.instagram.com/i.am.himanshu98/'">Instagram</button>
+                    <img class="icon" src="static/files/youtube.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/www.youtube.com/@DJHARMIX/'">Youtube</button>
+                    <img class="icon" src="static/files/coding.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/leetcode.com/u/iamhimanshu98/'">Leetcode</button>
+                    <img class="icon" src="static/files/github.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/github.com/iamhimanshu98/'">GitHub</button>
+                </div>
+                <div class="mail">
+                    <img class="mailicon" src="static/files/mail.png" alt="">
+                    <span id="mailtext">himanshukumawat1313@gmail.com</span>
+                    <img id="callicon" src="static/files/call.png" alt="">
+                    <span id="calltext">+918890414171</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <p class="copyright">copyright © himanshuportfolio.com | All rights reserved</p>
+
+        <!-- <div class="left_container">
+            
+            <h2 id="skills">Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Linux</li>
+                <li>SQL</li>
+                <li>HTML, CSS, JavaScript</li>
+            </ul>
+
+            <h2 id="interests">Interests</h2>
+            <p>
+            I'm particularly interested in natural language processing and computer vision. I love exploring new
+            datasets and building meaningful projects.
+            </p> 
+        </div> -->
+
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Music Producer', 'Youtuber', 'Graphic Designer', 'Data Scientist.'],
+            typeSpeed: 40,
+        });
+    </script>
+
+    <script>
+        var colors = ["rgb(148, 84, 251)"]
+        var index = 0;
+        function changeColor() {
+            var color = colors[index];
+            document.getElementById("").style.color = color;
+            index += 1;
+            if (index == colors.length) {
+                index = 0;
+            }
+        }
+        setInterval(function () {
+            changeColor();
+        }, 1000)
+    </script>
+
+</body>
+
+</html>
