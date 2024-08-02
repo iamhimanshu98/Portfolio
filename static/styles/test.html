@@ -1,0 +1,180 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #111132;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 50px;
+            background-color: aliceblue;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            color: black;
+            box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+            border-color: #6a5acd;
+        }
+
+        .container h2 {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        /*  */
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: aliceblue;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            border-color: #6a5acd;
+            box-shadow: 0 0 5px rgba(106, 90, 205, 0.5);
+            outline: none;
+        }
+
+        .form-group input::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1rem;
+            color: #666;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .form-group input:focus+label,
+        .form-group input:not(:placeholder-shown)+label {
+            top: -20px;
+            left: 10px;
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        /* */
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container button {
+
+            width: 60%;
+            background-color: aliceblue;
+            border: none;
+            padding: 1rem 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            font-size: 1.1rem;
+            transition: all 0.6s;
+        }
+
+        .container button:hover {
+            background-color: rgb(115, 93, 255);
+            box-shadow: 0 0 10px 1px rgb(164, 150, 255);
+            color: #fff;
+        }
+    </style>
+    <title>Contact Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Name</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="static/files/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Cedarville+Cursive&family=Pacifico&display=swap');
+    </style>
+    <title>Contact Form</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Name</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

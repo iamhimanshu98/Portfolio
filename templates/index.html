@@ -4,37 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- metadata for device compatibility -->
-    <title>Himanshu Kumawat | Portfolio</title> <!-- Browser Tab name -->
-    <link rel="shortcut icon" type="image/ico" href="static/files/favicon.ico"> <!-- Connecting Favicon for Browser tab -->
+    <link rel="shortcut icon" type="image/ico" href="static/files/favicon.ico">
+    <!-- Connecting Favicon for Browser tab -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Cedarville+Cursive&family=Pacifico&display=swap');
+    </style>
+    <title>Himanshu | Portfolio</title> <!-- Browser Tab name -->
+
 </head>
 
 <body>
-    <header >
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <header>
         <div id="navbar">
             <div class="left"><a href="/">Portfolio</a></div>
             <div class="right">
                 <ul>
-                    <li><a href="#sec1">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Skills</a></li>
-                    <li><a href="/">Interests</a></li>
-                    <li><a href="#sec2">Contact me</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactme">Contact me</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <main id="sec1" >
+    <main>
+        <section id="home" class="space"></section>
         <section class="first">
             <div class="left-section">
                 Hi, My name is <span id="colored">Himanshu</span>
                 <div>and I'm a</div>
                 <span id="element"></span>
                 <br>
-                <!-- <img class="downloadicon" src="static/files/download.png" alt=""> -->
                 <div id="cv"><a href="/static/files/resume.pdf" id="download" download="him_resume">Download Resume</a>
-                    <button class="git" onclick="window.location.href='https:/github.com/iamhimanshu98'">GitHub</button>
+                    <button class="git" onclick="window.location.href='/static/files/resume.pdf'">View</button>
                 </div>
 
             </div>
@@ -44,57 +57,136 @@
             </div>
 
         </section>
+        <section id="about" class="space"></section>
+        <section class="about">
+            <div class="img-about">
+                <img class="aboutimg" src="/static/files/bg2.png" alt="bg">
+            </div>
+            <p>
+                🚀 Hey, Tech Enthusiast! 🌟 <br><br>
 
-        <section id="sec2" class="second">
+                I’m a dedicated B.Tech student specializing in AI and Data Science. Currently honing my skills at PIET,
+                Jaipur. <br><br>
+
+                🌐 Hailing from the vibrant state of Rajasthan, I’ve been exploring the world of technology since my
+                early days. <br><br>
+
+                💻 My toolkit includes HTML5, CSS3, and a growing expertise in various web and software
+                technologies. <br><br>
+
+                👨‍💻 My journey is all about blending creativity with technology, pushing the boundaries of
+                innovation. <br><br>
+
+                🎧 When I’m not coding, you’ll find me producing music, exploring different
+                genres, and creating unique soundscapes. <br><br>
+
+                Let’s connect, create, and innovate together! 🔥✨ <br><br>
+
+                <span>- Himanshu K</span>
+            </p>
+        </section>
+
+        <section id="skills" class="space"></section>
+        <section class="skill">
+            <div class="lists">
+                <h2>Skills</h2>
+                <ul class="listtext">
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Bootstrap</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+            <div class="lists">
+                <h2>Interests</h2>
+                <ul class="listtext1">
+                    <li>Artificial Intelligence</li>
+                    <li>Data Science</li>
+                    <li>Web Development</li>
+                    <li>Machine Learning</li>
+                    <li>Hackathons Participation</li>
+                    <li>Reading Blogs</li>
+                    <li>Open Source Projects</li>
+                </ul>
+            </div>
+            <img class="skillimg" src="/static/files/bg.png" alt="bg">
+        </section>
+
+        <section id="projects" class="space"></section>
+        <section class="projects">
+            <div>
+                <div class="project">
+                    <img src="" alt="img">
+                    <h3>Music Website</h3>
+                    <p>A project that allows users to discover, listen to, and enjoy their favorite tracks online.</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="img">
+                    <h3>Self-Driving Car</h3>
+                    <p>A project focused on developing autonomous driving capabilities using AI and sensor data.</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="img">
+                    <h3>CLI Based Chat</h3>
+                    <p>A command-line interface chat application enabling real-time communication between users.</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="img">
+                    <h3>Kaiser RC Plane</h3>
+                    <p>A remote-controlled plane project, showcasing aerodynamics and control systems.</p>
+                </div>
+                <div class="project">
+                    <img src="" alt="img">
+                    <h3>ATM Simulation</h3>
+                    <p>A simulation of an ATM machine, handling transactions like withdrawals, deposits, and balance
+                        inquiries.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactme" class="space"></section>
+        <section class="second">
             <img id="bg" src="static/files/bg3.png" alt="bg_image" width="500">
             <div class="details">
+                <div class="title">Social media :</div>
                 <div id="socialmedia">
                     <img class="icon" src="static/files/linkedin.png" alt="">
                     <button class="media"
                         onclick="window.location.href='https:/www.linkedin.com/in/iamhimanshu98/'">Linkedin</button>
+                    <img class="icon" src="static/files/github.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/github.com/iamhimanshu98/'">GitHub</button>
+                    <img class="icon" src="static/files/coding.png" alt="">
+                    <button class="media"
+                        onclick="window.location.href='https:/leetcode.com/u/iamhimanshu98/'">Leetcode</button>
+
                     <img class="icon" src="static/files/instagram.png" alt="">
                     <button class="media"
                         onclick="window.location.href='https:/www.instagram.com/i.am.himanshu98/'">Instagram</button>
                     <img class="icon" src="static/files/youtube.png" alt="">
                     <button class="media"
                         onclick="window.location.href='https:/www.youtube.com/@DJHARMIX/'">Youtube</button>
-                    <img class="icon" src="static/files/coding.png" alt="">
-                    <button class="media"
-                        onclick="window.location.href='https:/leetcode.com/u/iamhimanshu98/'">Leetcode</button>
-                    <img class="icon" src="static/files/github.png" alt="">
-                    <button class="media"
-                        onclick="window.location.href='https:/github.com/iamhimanshu98/'">GitHub</button>
                 </div>
+                <div class="title">Contact me :</div>
                 <div class="mail">
                     <img class="mailicon" src="static/files/mail.png" alt="">
                     <span id="mailtext">himanshukumawat1313@gmail.com</span>
                     <img id="callicon" src="static/files/call.png" alt="">
                     <span id="calltext">+918890414171</span>
+                    <img id="callicon" src="static/files/form.png" alt="">
+                    <a class="formbutton" href="/form">Form</a>
                 </div>
-
             </div>
 
         </section>
 
         <p class="copyright">copyright © himanshuportfolio.com | All rights reserved</p>
-
-        <!-- <div class="left_container">
-            
-            <h2 id="skills">Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>Java</li>
-                <li>Linux</li>
-                <li>SQL</li>
-                <li>HTML, CSS, JavaScript</li>
-            </ul>
-
-            <h2 id="interests">Interests</h2>
-            <p>
-            I'm particularly interested in natural language processing and computer vision. I love exploring new
-            datasets and building meaningful projects.
-            </p> 
-        </div> -->
 
     </main>
 
@@ -107,19 +199,25 @@
     </script>
 
     <script>
-        var colors = ["rgb(148, 84, 251)"]
-        var index = 0;
-        function changeColor() {
-            var color = colors[index];
-            document.getElementById("").style.color = color;
-            index += 1;
-            if (index == colors.length) {
-                index = 0;
-            }
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
-        setInterval(function () {
-            changeColor();
-        }, 1000)
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 50) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            if (currentSection) {
+                history.replaceState(null, null, `#${currentSection}`);
+            }
+        });
     </script>
 
 </body>

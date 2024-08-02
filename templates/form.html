@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="static/files/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/form.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Borel&family=Cedarville+Cursive&family=Pacifico&display=swap');
+    </style>
+    <title>Contact Form</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="{{ url_for('user_query') }}" method="post">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required maxlength="40">
+                <label for="name">Name</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required maxlength="40">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder=" " required maxlength="120" ></textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
